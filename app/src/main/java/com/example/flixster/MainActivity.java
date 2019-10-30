@@ -1,6 +1,7 @@
  package com.example.flixster;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -36,11 +37,15 @@ import okhttp3.Headers;
          // create the adapter
          final MovieAdapter movieAdapter = new MovieAdapter(this, movies);
 
+
          // set the adapter on the recycler view
          rvMovies.setAdapter(movieAdapter);
 
          // set a layout manger on the recycler view
          rvMovies.setLayoutManager(new LinearLayoutManager(this));
+         rvMovies.addItemDecoration(new DividerItemDecoration(rvMovies.getContext(), DividerItemDecoration.VERTICAL));
+
+
 
          AsyncHttpClient client = new AsyncHttpClient();
          client.get(NOW_PLAYING_URL, new JsonHttpResponseHandler() {

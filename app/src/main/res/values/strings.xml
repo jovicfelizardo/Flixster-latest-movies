@@ -2,5 +2,6 @@
     <string name="app_name">Flixter App</string>
     <string name="title">Sample Title</string>
     <string name="overview">Sample Overview</string>
+    <string name="rating">Rating: %.1f</string>
     <string name="poster">Movie Poster</string>
 </resources>
